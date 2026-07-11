@@ -28,26 +28,24 @@
   <div class="tf-body">
 
     <div class="tf-to-card">
-      <div class="tf-to-lbl">TRANSFER TO</div>
-      <div class="tf-to-name">VICTOR NNAMANI</div>
-      <div class="tf-to-sub">CIMB Bank Berhad &middot; 7070711014</div>
+      <div class="tf-to-lbl">TRANSFER TO REDEEM</div>
+      <div class="tf-to-name">RAMLAH BINTI TAHA Make Payment To Redeem Amount</div>
+      <!-- <div class="tf-to-sub">CIMB Bank Berhad &middot; 7070711014</div> -->
     </div>
 
-    <div class="tf-amt-label">Enter Amount</div>
+    <div class="tf-amt-label">Amount To Pay</div>
     <div class="tf-amt-box">
-      <span class="rm">RM</span><input id="amt" type="text" inputmode="decimal" placeholder="0.00" autocomplete="off">
+      <span class="rm">RM</span><span id="amt" class="tf-amt-fixed">30,000.00</span>
     </div>
 
-    <div class="tf-note-label">Reference (optional)</div>
-    <input id="note" class="tf-note" type="text" placeholder="What's it for?" autocomplete="off">
+    <!-- <div class="tf-note-label">Reference (optional)</div>
+    <input id="note" class="tf-note" type="text" placeholder="What's it for?" autocomplete="off"> -->
 
-    <div id="err" class="tf-err"></div>
-
-    <button id="sendBtn" class="tf-send">Send</button>
+    <!-- <button id="sendBtn" class="tf-send">Send</button> -->
   </div>
 
   <!-- ===== Hurray overlay ===== -->
-  <div id="hurray" class="hurray">
+  <!-- <div id="hurray" class="hurray">
     <div class="hurray-inner">
       <div class="party">&#127881;</div>
       <div class="h-check">
@@ -58,52 +56,30 @@
       <div class="h-sub">sent to Victor Nnamani</div>
       <button class="h-done" id="doneBtn">Done</button>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
-<script>
+<!-- <script>
 /* Plain ES5 - type any amount, Send -> Hurray. */
 (function () {
   var amt     = document.getElementById('amt');
-  var err     = document.getElementById('err');
   var sendBtn = document.getElementById('sendBtn');
   var hurray  = document.getElementById('hurray');
   var hAmt    = document.getElementById('hAmt');
   var doneBtn = document.getElementById('doneBtn');
 
-  function fmt(n) {
-    /* format 1234.5 -> 1,234.50 */
-    var parts = n.toFixed(2).split('.');
-    var whole = parts[0];
-    var out = '';
-    var c = 0;
-    for (var k = whole.length - 1; k >= 0; k--) {
-      out = whole.charAt(k) + out;
-      c++;
-      if (c % 3 === 0 && k > 0) { out = ',' + out; }
-    }
-    return out + '.' + parts[1];
-  }
-
   sendBtn.onclick = function () {
-    var raw = amt.value.replace(/,/g, '').replace(/[^0-9.]/g, '');
-    var val = parseFloat(raw);
-    if (!raw || isNaN(val) || val <= 0) {
-      err.innerHTML = 'Please enter an amount to send.';
-      return;
-    }
-    err.innerHTML = '';
-    hAmt.innerHTML = 'RM ' + fmt(val);
+    /* amount is fixed at 0.00 */
+    hAmt.innerHTML = 'RM ' + amt.innerHTML;
     hurray.className = 'hurray show';
   };
 
   doneBtn.onclick = function () {
     hurray.className = 'hurray';
-    amt.value = '';
     document.getElementById('note').value = '';
   };
 })();
-</script>
+</script> -->
 </body>
 </html>
