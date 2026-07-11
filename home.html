@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Bank Islam</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="screen home">
+
+  <!-- ===== Header ===== -->
+  <div class="home-header">
+    <table class="row2 header-top">
+      <tr>
+        <td></td>
+        <td class="tright">
+          <!-- bell -->
+          <span class="hi-icon">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg>
+          </span>
+          <!-- logout -->
+          <a class="hi-icon" href="transaction.html">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <div class="greeting">Peace Be Upon You, <b>Encik Victor Nnamani...</b></div>
+    <div class="total-label">Total Balance</div>
+    <div class="balance">
+      <span id="balAmt">RM 10,000.00</span>
+      <span class="eye" id="eyeBtn">
+        <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Quick actions ===== -->
+  <div class="quick-card">
+    <table class="quick-table">
+      <tr>
+        <td>
+          <a href="transaction.html">
+            <div class="qa-icon">
+              <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d81b5f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+            </div>
+            <div class="qa-label">Transfer</div>
+          </a>
+        </td>
+        <td>
+          <div class="qa-icon">
+            <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d81b5f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="13" y2="17"></line></svg>
+          </div>
+          <div class="qa-label">Pay</div>
+        </td>
+        <td>
+          <div class="qa-icon">
+            <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d81b5f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 6h2"></path><circle cx="12" cy="17" r="1"></circle></svg>
+          </div>
+          <div class="qa-label">Reload</div>
+        </td>
+        <td>
+          <div class="qa-icon">
+            <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d81b5f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5z"></path></svg>
+          </div>
+          <div class="qa-label">BIMB<br>Secure</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== Tabs ===== -->
+  <div class="tabs">
+    <span class="tab active">Accounts</span>
+    <span class="tab">Wealth</span>
+    <span class="tab">Cards</span>
+    <span class="tab">Financing</span>
+  </div>
+
+  <!-- ===== Account cards ===== -->
+  <div class="cards-scroll">
+    <div class="acct-card">
+      <div class="yellow-blob"></div>
+      <div class="ac-name">Qard Savings Account-i</div>
+      <div class="ac-amt">RM 10,000.00</div>
+      <div class="ac-no">00000000000000</div>
+    </div>
+    <div class="acct-card ghost">
+      <div class="ac-open">Open New</div>
+    </div>
+  </div>
+  <div class="dots">
+    <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+
+  <!-- ===== Favourites ===== -->
+  <table class="sec-head">
+    <tr>
+      <td class="sec-title">Favourites</td>
+      <td class="sec-link">View All</td>
+    </tr>
+  </table>
+  <div class="fav-scroll">
+    <div class="fav">
+      <div class="fav-badge duit">D</div>
+      <div class="fav-name">Dad</div>
+    </div>
+    <div class="fav">
+      <div class="fav-badge b">M</div>
+      <div class="fav-name">Mom</div>
+    </div>
+    <div class="fav">
+      <div class="fav-badge g">Bank A</div>
+      <div class="fav-name">Lil Bro</div>
+    </div>
+    <div class="fav">
+      <div class="fav-badge p">Bank</div>
+      <div class="fav-name">Sister</div>
+    </div>
+  </div>
+
+  <!-- ===== Recent transactions ===== -->
+  <table class="sec-head">
+    <tr>
+      <td class="sec-title">Recent Transactions</td>
+      <td class="sec-link">View Spending</td>
+    </tr>
+  </table>
+  <div class="date-line">21 Nov 2024</div>
+
+  <!-- ===== Bottom nav ===== -->
+  <div class="bottom-nav">
+    <table class="nav-table">
+      <tr>
+        <td class="on">
+          <span class="nav-ico">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </span>
+          <span class="nav-lbl">Home</span>
+        </td>
+        <td>
+          <span class="nav-ico">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12" y2="17"></line></svg>
+          </span>
+          <span class="nav-lbl">Help Centre</span>
+        </td>
+        <td>
+          <span class="nav-scan">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+          </span>
+          <span class="nav-lbl">Scan QR</span>
+        </td>
+        <td>
+          <span class="nav-ico">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-2.9 1.3V22a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8 20.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 3.6 15a1.65 1.65 0 0 0-1.5-1H2a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 3.6 8.6l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 3.6 1.65 1.65 0 0 0 10 2.1V2a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 20.4 9c.14.31.22.65.22 1s-.08.69-.22 1z"></path></svg>
+          </span>
+          <span class="nav-lbl">Manage</span>
+        </td>
+        <td>
+          <span class="nav-ico">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </span>
+          <span class="nav-lbl">Profile</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

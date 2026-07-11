@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Bank Islam</title>
+<style>
+  * { margin:0; padding:0; -webkit-box-sizing:border-box; box-sizing:border-box; }
+  html, body { height:100%; background:#111; }
+  /* phone-width stage, centered */
+  .stage {
+    position:relative;
+    width:100%;
+    max-width:480px;
+    height:100%;
+    margin:0 auto;
+    background:#fff;
+    overflow:hidden;
+  }
+  .slide {
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    border:0;
+    opacity:0;
+    -webkit-transition:opacity .5s ease;
+    transition:opacity .5s ease;
+    z-index:1;
+  }
+  .slide.on { opacity:1; z-index:2; }
+
+  /* progress dots */
+  .dots {
+    position:absolute;
+    left:0; right:0; top:8px;
+    text-align:center;
+    z-index:10;
+  }
+  .d {
+    display:inline-block;
+    width:8px; height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+    margin:0 4px;
+    -webkit-box-shadow:0 0 3px rgba(0,0,0,.4);
+    box-shadow:0 0 3px rgba(0,0,0,.4);
+  }
+  .d.on { background:#fff; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <iframe class="slide on" src="home.html" scrolling="no"></iframe>
+    <iframe class="slide" src="transaction.html" scrolling="no"></iframe>
+    <iframe class="slide" src="receipt.html" scrolling="no"></iframe>
+    <iframe class="slide" src="transfer.html" scrolling="no"></iframe>
+
+    <div class="dots">
+      <span class="d on"></span><span class="d"></span><span class="d"></span><span class="d"></span>
+    </div>
+  </div>
+
+<script>
+/* Plain ES5 - auto-advance every few seconds, looping forever. */
+(function () {
+  var SECONDS = 5;                 /* <-- change this to speed up / slow down */
+  var slides = document.getElementsByClassName('slide');
+  var dots   = document.getElementsByClassName('d');
+  var i = 0;
+
+  function show(n) {
+    for (var k = 0; k < slides.length; k++) {
+      slides[k].className = 'slide' + (k === n ? ' on' : '');
+      dots[k].className   = 'd'     + (k === n ? ' on' : '');
+    }
+  }
+
+  var timer = setInterval(function () {
+    i = i + 1;
+    show(i);
+    /* stop on the last slide (the transfer page) so it can be used */
+    if (i >= slides.length - 1) {
+      clearInterval(timer);
+    }
+  }, SECONDS * 1000);
+})();
+</script>
+</body>
+</html>
